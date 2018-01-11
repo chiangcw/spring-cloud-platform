@@ -70,7 +70,7 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.2.2</version>
 		</dependency>
-		<!-- spring boot admin -->
+		<!-- admin服务端：spring-boot-admin-server、spring-boot-admin-server-ui -->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server</artifactId>
@@ -79,6 +79,17 @@
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+		<!-- admin客户端：spring-boot-admin-starter-client （加上该项能监控服务端自身的运行状态，其他项目只需要引入client就可以引入监控） -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui-login</artifactId>
 			<version>1.5.3</version>
 		</dependency>
 	</dependencies>
@@ -102,10 +113,7 @@
 					<useDefaultDelimiters>false</useDefaultDelimiters>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+
 			<!-- generate a git.properties file containing information about the state 
 				of your git source code repository -->
 			<plugin>
